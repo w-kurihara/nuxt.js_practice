@@ -1,9 +1,11 @@
 
 export default {
   mode: 'spa',
-  /*
-  ** Headers of the page
-  */
+
+  server: {
+    port: 8192
+  },
+
   head: {
     title: process.env.npm_package_name || '',
     meta: [
