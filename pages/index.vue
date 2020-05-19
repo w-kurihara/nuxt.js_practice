@@ -7,14 +7,21 @@
 </template>
 
 <script>
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 
 export default {
   components: {
   },
   mounted () {
+    const page = document.querySelector('.page-index')
+    disableBodyScroll(page)
+
     this.$nuxt.$emit('setHeader', {
       title: 'title'
     })
+  },
+  beforeDestory () {
+    clearAllBodyScrollLocks()
   }
 }
 </script>
