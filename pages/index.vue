@@ -10,6 +10,11 @@
 
 export default {
   components: {
+  },
+  mounted () {
+    this.$nuxt.$emit('setHeader', {
+      title: 'title'
+    })
   }
 }
 </script>
